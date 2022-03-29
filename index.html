@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Sepeti</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body onload="urunleriGetir()">
+    
+    <form action="#" id="market">
+        <h3 class="formBaslik">Spor Sepeti</h3>
+        <label for="kategori" class="aciklama">Ürün menüleri:</label>
+        <label for="kategoritenıs">Tenis Ürünleri</label>
+        <input type="radio" name="kategori" id="kategoriSut" checked>
+        <label for="kategorifutbol">Futbol  Ürünleri</label>
+        <input type="radio" name="kategori" id="kategoriGida">
+        <label for="kategoribasketbol">Basketbol Ürünleri</label>
+        <input type="radio" name="kategori" id="kategoriTemizlik">
+
+        <div id="urunPanel">
+            
+        </div>
+
+        <label for="adet" class="aciklama">Adet seçiniz:</label>
+        <input type="number" name="adet" id="urunAdet" value="1" min="1">
+        <input type="button" value="Sepete Ekle" id="btnEkle" onclick="sepeteEkle()">
+
+        <select name="sepet" id="sepetMarket" size="10">
+            <option value="0">Seçtiğiniz eşyalar</option>
+        </select>
+
+        <input type="button" value="Sepete gönder" id="btnCikar" onclick="sepettenCikar()">
+        <input type="button" value="Sepeti Boşalt" id="btnBosalt" onclick="sepetiBosalt()">
+
+        <label for="sepetTutar" class="aciklama">borcunuz:</label>
+        <h4 id="sepetTutar">0 TL</h4>
+        <input type="button" value=" Öde" id="btnTamamla">
+
+        <h5 id="sonuc"></h5>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
