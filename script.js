@@ -157,6 +157,22 @@ function koduEkle(){
     else{
         document.getElementById("sonuc").innerHTML="Geçerli bir kod girmediniz!";
     }
+
+
 }
 
+function kargolar()
+{
+    if(toplamTutar<500){
+        toplamTutar=toplamTutar+10;
+        document.getElementById("sepetTutar").innerHTML=+toplamTutar
+        document.getElementById("kargoekran").innerHTML="500 tl altı kargo ücreti 10 tl ";
+    }
+    else{
+        document.getElementById("kargoekran").innerHTML="500 tl üstü kargo ücretsiz";
+        document.getElementById("sepetTutar").innerHTML=+toplamTutar
+    }
 
+}
+
+ 
